@@ -1,0 +1,371 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Lima Imóveis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#3a2e28',
+                            light: '#5a4a40',
+                            gold: '#b28a50',
+                            bg: '#fcfaf8',
+                            border: '#e8dfd5',
+                            tab: '#f0eadd'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Custom scrollbar for content areas */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e8dfd5; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #b28a50; }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-dark font-sans h-screen flex flex-col overflow-hidden selection:bg-brand-gold selection:text-white">
+
+    <!-- Header/Progresso -->
+    <div class="w-full h-2 bg-brand-tab shrink-0">
+        <div id="progress-bar" class="h-full bg-brand-gold transition-all duration-500 ease-out" style="width: 0%;"></div>
+    </div>
+
+    <!-- Área Principal -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-6 md:p-12 flex flex-col overflow-hidden relative">
+        
+        <!-- Step 0: Capa -->
+        <div id="step-0" class="step-content flex flex-col items-center justify-center h-full text-center space-y-8 animate-fade-in">
+            <div class="w-24 h-[2px] bg-brand-gold mb-4"></div>
+            <h1 class="text-5xl md:text-6xl font-serif text-brand-dark tracking-tight">Orquestra Operacional</h1>
+            <h2 class="text-2xl md:text-3xl text-brand-gold font-light italic">Lima Imóveis</h2>
+            <div class="max-w-xl mt-8 p-6 bg-white/50 rounded-xl border border-brand-border shadow-sm">
+                <p class="text-lg text-brand-light">
+                    <strong>Objetivo Central:</strong> Sistematizar e otimizar todos os processos através do ImobiBrasil CRM.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 1: Base -->
+        <div id="step-1" class="step-content hidden flex-col h-full animate-fade-in">
+            <h2 class="text-3xl font-serif text-brand-dark mb-8 text-center shrink-0">A Base da Implantação</h2>
+            <div class="grid md:grid-cols-2 gap-8 flex-1 overflow-y-auto pb-4">
+                <div class="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-brand-gold h-fit">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-[#f8f5f0] rounded-full text-brand-gold">
+                            <i data-lucide="settings" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark">Configuração de Módulos</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-brand-light"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i><span>Parametrizar acessos</span></li>
+                        <li class="flex items-start gap-3 text-brand-light"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i><span>Configuração de permissões</span></li>
+                        <li class="flex items-start gap-3 text-brand-light"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i><span>Ajustar automações</span></li>
+                        <li class="flex items-start gap-3 text-brand-light"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i><span>Validar funcionamento do fluxo</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-brand-dark h-fit">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-[#f8f5f0] rounded-full text-brand-dark">
+                            <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark">Treinamento por Setor</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-brand-light"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-dark shrink-0 mt-0.5"></i><span>Padronizar processos</span></li>
+                        <li class="flex items-start gap-3 text-brand-light"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-dark shrink-0 mt-0.5"></i><span>Definir responsabilidades</span></li>
+                        <li class="flex items-start gap-3 text-brand-light"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-dark shrink-0 mt-0.5"></i><span>Orientar boas práticas</span></li>
+                        <li class="flex items-start gap-3 text-brand-light"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-dark shrink-0 mt-0.5"></i><span>Simular rotina real</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Pacote 1 -->
+        <div id="step-2" class="step-content hidden flex-col h-full animate-fade-in">
+            <div class="text-center mb-6 shrink-0">
+                <h2 class="text-3xl font-serif text-brand-dark">Pacote 01</h2>
+                <p class="text-brand-gold mt-1">Estruturação completa por departamentos</p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 justify-center mb-6 shrink-0" id="tabs-container">
+                <!-- Abas geradas via JS -->
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-brand-border flex-1 overflow-y-auto">
+                <h3 id="tab-title" class="text-2xl font-serif text-brand-gold mb-6 border-b border-brand-tab pb-4"></h3>
+                <div id="tab-content" class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                    <!-- Conteúdo gerado via JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Pacote 2 -->
+        <div id="step-3" class="step-content hidden flex-col h-full animate-fade-in">
+            <div class="text-center mb-6 shrink-0">
+                <div class="inline-flex items-center justify-center p-3 bg-brand-gold/10 rounded-full mb-3">
+                    <i data-lucide="zap" class="w-8 h-8 text-brand-gold"></i>
+                </div>
+                <h2 class="text-3xl font-serif text-brand-dark">Pacote 02</h2>
+                <p class="text-brand-gold mt-1 font-medium">Tudo do Pacote 01 + Automação Avançada</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-brand-dark to-[#2a211c] rounded-2xl p-6 md:p-8 shadow-xl flex-1 overflow-y-auto text-white">
+                <div class="grid md:grid-cols-2 gap-6 h-fit" id="pacote2-content">
+                    <!-- Gerado via JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Resumo -->
+        <div id="step-4" class="step-content hidden flex-col items-center justify-center h-full text-center space-y-8 animate-fade-in">
+            <h2 class="text-3xl md:text-4xl font-serif text-brand-dark mb-4">Qual cenário ideal para a Lima Imóveis hoje?</h2>
+            <div class="flex flex-col md:flex-row gap-6 w-full max-w-4xl mt-8">
+                <div class="flex-1 bg-white p-8 rounded-2xl border border-brand-border shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-4">Pacote 01</h3>
+                    <p class="text-brand-light mb-6">Estruturação, organização e controle total da operação base.</p>
+                    <div class="text-brand-gold font-medium">Fundação Sólida</div>
+                </div>
+                <div class="flex-1 bg-brand-dark p-8 rounded-2xl shadow-xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i data-lucide="zap" class="w-24 h-24 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Pacote 02</h3>
+                    <p class="text-gray-300 mb-6 relative z-10">Organização + Automações de alta performance e inteligência artificial.</p>
+                    <div class="text-brand-gold font-bold relative z-10">Escala e Tecnologia</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Controles de Navegação -->
+    <footer class="bg-white border-t border-brand-border py-4 px-6 md:px-12 flex justify-between items-center shrink-0">
+        <button id="btn-prev" onclick="changeStep(-1)" disabled class="flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors text-gray-300 cursor-not-allowed">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            Anterior
+        </button>
+        
+        <div class="flex gap-2" id="dots-container">
+            <!-- Pontos gerados via JS -->
+        </div>
+
+        <button id="btn-next" onclick="changeStep(1)" class="flex items-center gap-2 px-6 py-2 rounded-lg font-medium transition-all bg-brand-dark text-white hover:bg-[#2a211c] shadow-sm">
+            <span>Iniciar Apresentação</span>
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+    </footer>
+
+    <script>
+        // Dados da apresentação
+        const pkg1Data = {
+            locacao: {
+                title: 'Locação e Administrativo',
+                icon: 'building',
+                items: [
+                    { name: 'Contratos', desc: 'Cadastro e gestão dos contratos de locação.' },
+                    { name: 'Vencimentos', desc: 'Controle de prazos e status dos contratos.' },
+                    { name: 'Faturas & Lançamentos', desc: 'Controle de valores a receber, registro de aluguéis, taxas e despesas.' },
+                    { name: 'Cobranças & Notificações', desc: 'Automação e envio de avisos por e-mail e WhatsApp.' },
+                    { name: 'Repasses & Histórico', desc: 'Controle de pagamentos aos proprietários e registro financeiro.' },
+                    { name: 'Área Privada & Boletos', desc: 'Acesso do cliente a documentos e boletos anexados.' },
+                    { name: 'Chamados & Documentos', desc: 'Acompanhamento de solicitações e organização de arquivos.' },
+                    { name: 'DIMOB', desc: 'Organização de informações para declaração anual.' }
+                ]
+            },
+            vendas: {
+                title: 'Vendas e Captação',
+                icon: 'briefcase',
+                items: [
+                    { name: 'Funil de Negócios', desc: 'Acompanhamento detalhado das negociações.' },
+                    { name: 'Clientes', desc: 'Cadastro e gestão eficiente dos atendimentos.' },
+                    { name: 'Imóveis', desc: 'Consulta e atualização rápida do portfólio.' },
+                    { name: 'Negociações', desc: 'Registro de todas as etapas da venda.' },
+                    { name: 'Visitas', desc: 'Agendamento e acompanhamento de visitas.' }
+                ]
+            },
+            marketing: {
+                title: 'Marketing',
+                icon: 'megaphone',
+                items: [
+                    { name: 'IA para descrições', desc: 'Criação automática e persuasiva de anúncios para os imóveis.' }
+                ]
+            },
+            diretoria: {
+                title: 'Diretoria',
+                icon: 'line-chart',
+                items: [
+                    { name: 'Dashboard & Indicadores', desc: 'Visão geral da operação e acompanhamento dos principais números.' },
+                    { name: 'Relatórios & Resultados', desc: 'Análise gerencial e monitoramento do desempenho da imobiliária.' },
+                    { name: 'Equipe', desc: 'Acompanhamento da produtividade dos colaboradores.' },
+                    { name: 'Financeiro', desc: 'Visão de faturas, cobranças em aberto e repasses aos proprietários.' },
+                    { name: 'Operacional', desc: 'Acompanhamento de chamados e oportunidades (Leads).' }
+                ]
+            }
+        };
+
+        const pkg2Data = [
+            { title: 'Esteira de Leads', desc: 'Organização da entrada e distribuição de contatos.' },
+            { title: 'Rodízio de Leads', desc: 'Distribuição automática entre corretores.' },
+            { title: 'Redistribuição', desc: 'Reaproveitamento inteligente de contatos parados.' },
+            { title: 'IA para decoração', desc: 'Ambientação virtual dos imóveis para encantar clientes.' },
+            { title: 'Cadastro Inteligente', desc: 'Criação rápida e eficiente de fichas de imóveis.' },
+            { title: 'Integrações', desc: 'Recebimento de leads via Facebook Ads e WhatsApp direto pelo site.' }
+        ];
+
+        // Estado
+        let currentStep = 0;
+        let activeTab = 'locacao';
+        const totalSteps = 5;
+
+        // Inicialização
+        function init() {
+            renderTabs();
+            renderTabContent(activeTab);
+            renderPacote2();
+            updateUI();
+            lucide.createIcons();
+        }
+
+        // Navegação
+        function changeStep(direction) {
+            currentStep += direction;
+            if (currentStep < 0) currentStep = 0;
+            if (currentStep >= totalSteps) currentStep = totalSteps - 1;
+            updateUI();
+        }
+
+        function updateUI() {
+            // Atualiza barra de progresso
+            document.getElementById('progress-bar').style.width = `${(currentStep / (totalSteps - 1)) * 100}%`;
+
+            // Mostra/esconde passos
+            document.querySelectorAll('.step-content').forEach((el, index) => {
+                if (index === currentStep) {
+                    el.classList.remove('hidden');
+                    // Força re-animação
+                    el.classList.remove('animate-fade-in');
+                    void el.offsetWidth; 
+                    el.classList.add('animate-fade-in');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+
+            // Atualiza botões
+            const btnPrev = document.getElementById('btn-prev');
+            const btnNext = document.getElementById('btn-next');
+
+            if (currentStep === 0) {
+                btnPrev.disabled = true;
+                btnPrev.className = "flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors text-gray-300 cursor-not-allowed";
+                btnNext.querySelector('span').textContent = "Iniciar Apresentação";
+            } else {
+                btnPrev.disabled = false;
+                btnPrev.className = "flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors text-brand-light hover:bg-[#f8f5f0]";
+                btnNext.querySelector('span').textContent = "Avançar";
+            }
+
+            if (currentStep === totalSteps - 1) {
+                btnNext.classList.add('opacity-0', 'pointer-events-none');
+            } else {
+                btnNext.classList.remove('opacity-0', 'pointer-events-none');
+            }
+
+            // Atualiza pontos (dots)
+            const dotsContainer = document.getElementById('dots-container');
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalSteps; i++) {
+                const dot = document.createElement('div');
+                dot.className = `w-2.5 h-2.5 rounded-full transition-colors duration-300 ${i === currentStep ? 'bg-brand-gold' : 'bg-brand-border'}`;
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        // Renderização Pacote 1 (Abas)
+        function renderTabs() {
+            const container = document.getElementById('tabs-container');
+            container.innerHTML = '';
+            
+            Object.keys(pkg1Data).forEach(key => {
+                const data = pkg1Data[key];
+                const btn = document.createElement('button');
+                const isActive = key === activeTab;
+                
+                btn.className = `flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
+                    isActive ? 'bg-brand-dark text-white shadow-md' : 'bg-white text-brand-light hover:bg-brand-tab border border-brand-border'
+                }`;
+                btn.onclick = () => {
+                    activeTab = key;
+                    renderTabs();
+                    renderTabContent(key);
+                };
+                
+                btn.innerHTML = `
+                    <i data-lucide="${data.icon}" class="w-5 h-5"></i>
+                    <span class="font-medium">${data.title}</span>
+                `;
+                container.appendChild(btn);
+            });
+            lucide.createIcons();
+        }
+
+        function renderTabContent(key) {
+            const data = pkg1Data[key];
+            document.getElementById('tab-title').textContent = data.title;
+            
+            const content = document.getElementById('tab-content');
+            content.innerHTML = data.items.map(item => `
+                <div class="flex flex-col">
+                    <span class="font-bold text-brand-dark flex items-center gap-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
+                        ${item.name}
+                    </span>
+                    <span class="text-sm text-brand-light mt-1 ml-3.5 leading-relaxed">
+                        ${item.desc}
+                    </span>
+                </div>
+            `).join('');
+        }
+
+        // Renderização Pacote 2
+        function renderPacote2() {
+            const container = document.getElementById('pacote2-content');
+            container.innerHTML = pkg2Data.map(item => `
+                <div class="bg-white/10 p-5 rounded-xl border border-white/5 backdrop-blur-sm hover:bg-white/20 transition-colors">
+                    <h4 class="font-bold text-brand-border mb-2">${item.title}</h4>
+                    <p class="text-sm text-gray-300">${item.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        // Inicializa ao carregar
+        window.onload = init;
+    </script>
+</body>
+</html>
+
+```
