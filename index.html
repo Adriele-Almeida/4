@@ -39,14 +39,13 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Custom scrollbar for content areas */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #e8dfd5; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #b28a50; }
     </style>
 </head>
-<body class="bg-brand-bg text-brand-dark font-sans h-screen flex flex-col overflow-hidden selection:bg-brand-gold selection:text-white">
+<body class="bg-brand-bg text-brand-dark font-sans h-[100dvh] flex flex-col overflow-hidden selection:bg-brand-gold selection:text-white">
 
     <!-- Header/Progresso -->
     <div class="w-full h-2 bg-brand-tab shrink-0">
@@ -54,25 +53,25 @@
     </div>
 
     <!-- Área Principal -->
-    <main class="flex-1 max-w-6xl w-full mx-auto p-6 md:p-12 flex flex-col overflow-hidden relative">
+    <main class="flex-1 overflow-y-auto w-full max-w-6xl mx-auto p-4 md:p-8 relative">
         
         <!-- Step 0: Capa -->
-        <div id="step-0" class="step-content flex flex-col items-center justify-center h-full text-center space-y-8 animate-fade-in">
+        <div id="step-0" class="step-content flex flex-col items-center justify-center min-h-full py-10 text-center space-y-8 animate-fade-in">
             <div class="w-24 h-[2px] bg-brand-gold mb-4"></div>
-            <h1 class="text-5xl md:text-6xl font-serif text-brand-dark tracking-tight">Orquestra Operacional</h1>
-            <h2 class="text-2xl md:text-3xl text-brand-gold font-light italic">Lima Imóveis</h2>
+            <h1 class="text-4xl md:text-6xl font-serif text-brand-dark tracking-tight">Orquestra Operacional</h1>
+            <h2 class="text-xl md:text-3xl text-brand-gold font-light italic">Lima Imóveis</h2>
             <div class="max-w-xl mt-8 p-6 bg-white/50 rounded-xl border border-brand-border shadow-sm">
-                <p class="text-lg text-brand-light">
+                <p class="text-base md:text-lg text-brand-light">
                     <strong>Objetivo Central:</strong> Sistematizar e otimizar todos os processos através do ImobiBrasil CRM.
                 </p>
             </div>
         </div>
 
         <!-- Step 1: Base -->
-        <div id="step-1" class="step-content hidden flex-col h-full animate-fade-in">
-            <h2 class="text-3xl font-serif text-brand-dark mb-8 text-center shrink-0">A Base da Implantação</h2>
-            <div class="grid md:grid-cols-2 gap-8 flex-1 overflow-y-auto pb-4">
-                <div class="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-brand-gold h-fit">
+        <div id="step-1" class="step-content hidden flex-col min-h-full py-4 animate-fade-in">
+            <h2 class="text-2xl md:text-3xl font-serif text-brand-dark mb-8 text-center">A Base da Implantação</h2>
+            <div class="grid md:grid-cols-2 gap-6 flex-1">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border-t-4 border-brand-gold h-fit">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="p-3 bg-[#f8f5f0] rounded-full text-brand-gold">
                             <i data-lucide="settings" class="w-8 h-8"></i>
@@ -87,7 +86,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-brand-dark h-fit">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border-t-4 border-brand-dark h-fit">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="p-3 bg-[#f8f5f0] rounded-full text-brand-dark">
                             <i data-lucide="graduation-cap" class="w-8 h-8"></i>
@@ -105,18 +104,18 @@
         </div>
 
         <!-- Step 2: Pacote 1 -->
-        <div id="step-2" class="step-content hidden flex-col h-full animate-fade-in">
-            <div class="text-center mb-6 shrink-0">
-                <h2 class="text-3xl font-serif text-brand-dark">Pacote 01</h2>
-                <p class="text-brand-gold mt-1">Estruturação completa por departamentos</p>
+        <div id="step-2" class="step-content hidden flex-col min-h-full py-4 animate-fade-in">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl md:text-3xl font-serif text-brand-dark">Pacote 01</h2>
+                <p class="text-brand-gold mt-1 text-sm md:text-base">Estruturação completa por departamentos</p>
             </div>
 
-            <div class="flex flex-wrap gap-2 justify-center mb-6 shrink-0" id="tabs-container">
+            <div class="flex flex-wrap gap-2 justify-center mb-6" id="tabs-container">
                 <!-- Abas geradas via JS -->
             </div>
 
-            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-brand-border flex-1 overflow-y-auto">
-                <h3 id="tab-title" class="text-2xl font-serif text-brand-gold mb-6 border-b border-brand-tab pb-4"></h3>
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-brand-border h-fit">
+                <h3 id="tab-title" class="text-xl md:text-2xl font-serif text-brand-gold mb-6 border-b border-brand-tab pb-4"></h3>
                 <div id="tab-content" class="grid md:grid-cols-2 gap-x-8 gap-y-6">
                     <!-- Conteúdo gerado via JS -->
                 </div>
@@ -124,37 +123,37 @@
         </div>
 
         <!-- Step 3: Pacote 2 -->
-        <div id="step-3" class="step-content hidden flex-col h-full animate-fade-in">
-            <div class="text-center mb-6 shrink-0">
+        <div id="step-3" class="step-content hidden flex-col min-h-full py-4 animate-fade-in">
+            <div class="text-center mb-6">
                 <div class="inline-flex items-center justify-center p-3 bg-brand-gold/10 rounded-full mb-3">
-                    <i data-lucide="zap" class="w-8 h-8 text-brand-gold"></i>
+                    <i data-lucide="zap" class="w-6 h-6 text-brand-gold"></i>
                 </div>
-                <h2 class="text-3xl font-serif text-brand-dark">Pacote 02</h2>
-                <p class="text-brand-gold mt-1 font-medium">Tudo do Pacote 01 + Automação Avançada</p>
+                <h2 class="text-2xl md:text-3xl font-serif text-brand-dark">Pacote 02</h2>
+                <p class="text-brand-gold mt-1 text-sm md:text-base font-medium">Tudo do Pacote 01 + Automação Avançada</p>
             </div>
 
-            <div class="bg-gradient-to-br from-brand-dark to-[#2a211c] rounded-2xl p-6 md:p-8 shadow-xl flex-1 overflow-y-auto text-white">
-                <div class="grid md:grid-cols-2 gap-6 h-fit" id="pacote2-content">
+            <div class="bg-gradient-to-br from-brand-dark to-[#2a211c] rounded-2xl p-6 md:p-8 shadow-xl text-white h-fit">
+                <div class="grid md:grid-cols-2 gap-4 md:gap-6" id="pacote2-content">
                     <!-- Gerado via JS -->
                 </div>
             </div>
         </div>
 
         <!-- Step 4: Resumo -->
-        <div id="step-4" class="step-content hidden flex-col items-center justify-center h-full text-center space-y-8 animate-fade-in">
-            <h2 class="text-3xl md:text-4xl font-serif text-brand-dark mb-4">Qual cenário ideal para a Lima Imóveis hoje?</h2>
+        <div id="step-4" class="step-content hidden flex-col items-center justify-center min-h-full py-10 text-center animate-fade-in">
+            <h2 class="text-2xl md:text-4xl font-serif text-brand-dark mb-4">Qual cenário ideal para a Lima Imóveis?</h2>
             <div class="flex flex-col md:flex-row gap-6 w-full max-w-4xl mt-8">
-                <div class="flex-1 bg-white p-8 rounded-2xl border border-brand-border shadow-sm hover:shadow-md transition-shadow">
-                    <h3 class="text-2xl font-bold text-brand-dark mb-4">Pacote 01</h3>
-                    <p class="text-brand-light mb-6">Estruturação, organização e controle total da operação base.</p>
+                <div class="flex-1 bg-white p-6 md:p-8 rounded-2xl border border-brand-border shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">Pacote 01</h3>
+                    <p class="text-brand-light mb-6 text-sm md:text-base">Estruturação, organização e controle total da operação base.</p>
                     <div class="text-brand-gold font-medium">Fundação Sólida</div>
                 </div>
-                <div class="flex-1 bg-brand-dark p-8 rounded-2xl shadow-xl relative overflow-hidden group">
+                <div class="flex-1 bg-brand-dark p-6 md:p-8 rounded-2xl shadow-xl relative overflow-hidden group">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                         <i data-lucide="zap" class="w-24 h-24 text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Pacote 02</h3>
-                    <p class="text-gray-300 mb-6 relative z-10">Organização + Automações de alta performance e inteligência artificial.</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-4 relative z-10">Pacote 02</h3>
+                    <p class="text-gray-300 mb-6 text-sm md:text-base relative z-10">Organização + Automações de alta performance e I.A.</p>
                     <div class="text-brand-gold font-bold relative z-10">Escala e Tecnologia</div>
                 </div>
             </div>
@@ -162,86 +161,76 @@
 
     </main>
 
-    <!-- Controles de Navegação -->
-    <footer class="bg-white border-t border-brand-border py-4 px-6 md:px-12 flex justify-between items-center shrink-0">
-        <button id="btn-prev" onclick="changeStep(-1)" disabled class="flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors text-gray-300 cursor-not-allowed">
+    <!-- Controles de Navegação Fixos no Rodapé com espaçamento extra para o Gemini (pb-36) -->
+    <footer class="bg-white border-t border-brand-border pt-4 pb-36 md:pb-8 px-4 md:px-8 flex justify-between items-center shrink-0 z-50">
+        <button id="btn-prev" onclick="changeStep(-1)" disabled class="flex items-center gap-1 md:gap-2 px-3 md:px-4 py-2 rounded-lg font-medium transition-colors text-gray-300 cursor-not-allowed text-sm md:text-base">
             <i data-lucide="chevron-left" class="w-5 h-5"></i>
-            Anterior
+            <span class="hidden md:inline">Anterior</span>
         </button>
         
-        <div class="flex gap-2" id="dots-container">
+        <div class="flex gap-1.5 md:gap-2" id="dots-container">
             <!-- Pontos gerados via JS -->
         </div>
 
-        <button id="btn-next" onclick="changeStep(1)" class="flex items-center gap-2 px-6 py-2 rounded-lg font-medium transition-all bg-brand-dark text-white hover:bg-[#2a211c] shadow-sm">
-            <span>Iniciar Apresentação</span>
+        <button id="btn-next" onclick="changeStep(1)" class="flex items-center gap-1 md:gap-2 px-4 md:px-6 py-2 rounded-lg font-medium transition-all bg-brand-dark text-white hover:bg-[#2a211c] shadow-sm text-sm md:text-base">
+            <span id="btn-next-text">Iniciar</span>
             <i data-lucide="chevron-right" class="w-5 h-5"></i>
         </button>
     </footer>
 
     <script>
-        // Dados da apresentação
         const pkg1Data = {
             locacao: {
-                title: 'Locação e Administrativo',
-                icon: 'building',
+                title: 'Locação e Administrativo', icon: 'building',
                 items: [
-                    { name: 'Contratos', desc: 'Cadastro e gestão dos contratos de locação.' },
-                    { name: 'Vencimentos', desc: 'Controle de prazos e status dos contratos.' },
-                    { name: 'Faturas & Lançamentos', desc: 'Controle de valores a receber, registro de aluguéis, taxas e despesas.' },
-                    { name: 'Cobranças & Notificações', desc: 'Automação e envio de avisos por e-mail e WhatsApp.' },
-                    { name: 'Repasses & Histórico', desc: 'Controle de pagamentos aos proprietários e registro financeiro.' },
-                    { name: 'Área Privada & Boletos', desc: 'Acesso do cliente a documentos e boletos anexados.' },
-                    { name: 'Chamados & Documentos', desc: 'Acompanhamento de solicitações e organização de arquivos.' },
-                    { name: 'DIMOB', desc: 'Organização de informações para declaração anual.' }
+                    { name: 'Contratos', desc: 'Cadastro e gestão dos contratos.' },
+                    { name: 'Vencimentos', desc: 'Controle de prazos e status.' },
+                    { name: 'Faturas & Lançamentos', desc: 'Controle de valores, aluguéis, taxas.' },
+                    { name: 'Cobranças & Notificações', desc: 'Automação e envio via e-mail/WhatsApp.' },
+                    { name: 'Repasses & Histórico', desc: 'Pagamentos aos proprietários e registro.' },
+                    { name: 'Área Privada', desc: 'Acesso a documentos e boletos anexados.' },
+                    { name: 'Chamados & Docs', desc: 'Acompanhamento e organização de arquivos.' },
+                    { name: 'DIMOB', desc: 'Informações para declaração anual.' }
                 ]
             },
             vendas: {
-                title: 'Vendas e Captação',
-                icon: 'briefcase',
+                title: 'Vendas e Captação', icon: 'briefcase',
                 items: [
-                    { name: 'Funil de Negócios', desc: 'Acompanhamento detalhado das negociações.' },
-                    { name: 'Clientes', desc: 'Cadastro e gestão eficiente dos atendimentos.' },
-                    { name: 'Imóveis', desc: 'Consulta e atualização rápida do portfólio.' },
-                    { name: 'Negociações', desc: 'Registro de todas as etapas da venda.' },
-                    { name: 'Visitas', desc: 'Agendamento e acompanhamento de visitas.' }
+                    { name: 'Funil de Negócios', desc: 'Acompanhamento das negociações.' },
+                    { name: 'Clientes e Imóveis', desc: 'Gestão de atendimentos e portfólio.' },
+                    { name: 'Negociações', desc: 'Registro de todas as etapas.' },
+                    { name: 'Visitas', desc: 'Agendamento e acompanhamento.' }
                 ]
             },
             marketing: {
-                title: 'Marketing',
-                icon: 'megaphone',
+                title: 'Marketing', icon: 'megaphone',
                 items: [
-                    { name: 'IA para descrições', desc: 'Criação automática e persuasiva de anúncios para os imóveis.' }
+                    { name: 'IA para descrições', desc: 'Criação automática de anúncios.' }
                 ]
             },
             diretoria: {
-                title: 'Diretoria',
-                icon: 'line-chart',
+                title: 'Diretoria', icon: 'line-chart',
                 items: [
-                    { name: 'Dashboard & Indicadores', desc: 'Visão geral da operação e acompanhamento dos principais números.' },
-                    { name: 'Relatórios & Resultados', desc: 'Análise gerencial e monitoramento do desempenho da imobiliária.' },
-                    { name: 'Equipe', desc: 'Acompanhamento da produtividade dos colaboradores.' },
-                    { name: 'Financeiro', desc: 'Visão de faturas, cobranças em aberto e repasses aos proprietários.' },
-                    { name: 'Operacional', desc: 'Acompanhamento de chamados e oportunidades (Leads).' }
+                    { name: 'Dashboard', desc: 'Visão geral e acompanhamento de números.' },
+                    { name: 'Relatórios', desc: 'Análise gerencial e monitoramento.' },
+                    { name: 'Equipe e Operacional', desc: 'Acompanhamento de produtividade e chamados.' },
+                    { name: 'Financeiro', desc: 'Visão de faturas, cobranças e repasses.' }
                 ]
             }
         };
 
         const pkg2Data = [
-            { title: 'Esteira de Leads', desc: 'Organização da entrada e distribuição de contatos.' },
-            { title: 'Rodízio de Leads', desc: 'Distribuição automática entre corretores.' },
-            { title: 'Redistribuição', desc: 'Reaproveitamento inteligente de contatos parados.' },
-            { title: 'IA para decoração', desc: 'Ambientação virtual dos imóveis para encantar clientes.' },
-            { title: 'Cadastro Inteligente', desc: 'Criação rápida e eficiente de fichas de imóveis.' },
-            { title: 'Integrações', desc: 'Recebimento de leads via Facebook Ads e WhatsApp direto pelo site.' }
+            { title: 'Esteira de Leads', desc: 'Organização e distribuição de contatos.' },
+            { title: 'Rodízio e Redistribuição', desc: 'Distribuição e reaproveitamento de contatos.' },
+            { title: 'IA para decoração', desc: 'Ambientação virtual dos imóveis.' },
+            { title: 'Cadastro Inteligente', desc: 'Criação rápida de fichas de imóveis.' },
+            { title: 'Integrações', desc: 'Leads via Facebook Ads e WhatsApp site.' }
         ];
 
-        // Estado
         let currentStep = 0;
         let activeTab = 'locacao';
         const totalSteps = 5;
 
-        // Inicialização
         function init() {
             renderTabs();
             renderTabContent(activeTab);
@@ -250,23 +239,21 @@
             lucide.createIcons();
         }
 
-        // Navegação
         function changeStep(direction) {
             currentStep += direction;
             if (currentStep < 0) currentStep = 0;
             if (currentStep >= totalSteps) currentStep = totalSteps - 1;
+            
+            document.querySelector('main').scrollTop = 0;
             updateUI();
         }
 
         function updateUI() {
-            // Atualiza barra de progresso
             document.getElementById('progress-bar').style.width = `${(currentStep / (totalSteps - 1)) * 100}%`;
 
-            // Mostra/esconde passos
             document.querySelectorAll('.step-content').forEach((el, index) => {
                 if (index === currentStep) {
                     el.classList.remove('hidden');
-                    // Força re-animação
                     el.classList.remove('animate-fade-in');
                     void el.offsetWidth; 
                     el.classList.add('animate-fade-in');
@@ -275,18 +262,18 @@
                 }
             });
 
-            // Atualiza botões
             const btnPrev = document.getElementById('btn-prev');
             const btnNext = document.getElementById('btn-next');
+            const btnNextText = document.getElementById('btn-next-text');
 
             if (currentStep === 0) {
                 btnPrev.disabled = true;
-                btnPrev.className = "flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors text-gray-300 cursor-not-allowed";
-                btnNext.querySelector('span').textContent = "Iniciar Apresentação";
+                btnPrev.className = "flex items-center gap-1 md:gap-2 px-3 md:px-4 py-2 rounded-lg font-medium transition-colors text-gray-300 cursor-not-allowed text-sm md:text-base";
+                btnNextText.textContent = window.innerWidth < 768 ? "Iniciar" : "Iniciar Apresentação";
             } else {
                 btnPrev.disabled = false;
-                btnPrev.className = "flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors text-brand-light hover:bg-[#f8f5f0]";
-                btnNext.querySelector('span').textContent = "Avançar";
+                btnPrev.className = "flex items-center gap-1 md:gap-2 px-3 md:px-4 py-2 rounded-lg font-medium transition-colors text-brand-light hover:bg-[#f8f5f0] text-sm md:text-base";
+                btnNextText.textContent = "Avançar";
             }
 
             if (currentStep === totalSteps - 1) {
@@ -295,17 +282,15 @@
                 btnNext.classList.remove('opacity-0', 'pointer-events-none');
             }
 
-            // Atualiza pontos (dots)
             const dotsContainer = document.getElementById('dots-container');
             dotsContainer.innerHTML = '';
             for (let i = 0; i < totalSteps; i++) {
                 const dot = document.createElement('div');
-                dot.className = `w-2.5 h-2.5 rounded-full transition-colors duration-300 ${i === currentStep ? 'bg-brand-gold' : 'bg-brand-border'}`;
+                dot.className = `w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-colors duration-300 ${i === currentStep ? 'bg-brand-gold' : 'bg-brand-border'}`;
                 dotsContainer.appendChild(dot);
             }
         }
 
-        // Renderização Pacote 1 (Abas)
         function renderTabs() {
             const container = document.getElementById('tabs-container');
             container.innerHTML = '';
@@ -315,7 +300,7 @@
                 const btn = document.createElement('button');
                 const isActive = key === activeTab;
                 
-                btn.className = `flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
+                btn.className = `flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-full transition-all duration-300 text-sm md:text-base ${
                     isActive ? 'bg-brand-dark text-white shadow-md' : 'bg-white text-brand-light hover:bg-brand-tab border border-brand-border'
                 }`;
                 btn.onclick = () => {
@@ -325,7 +310,7 @@
                 };
                 
                 btn.innerHTML = `
-                    <i data-lucide="${data.icon}" class="w-5 h-5"></i>
+                    <i data-lucide="${data.icon}" class="w-4 h-4 md:w-5 md:h-5"></i>
                     <span class="font-medium">${data.title}</span>
                 `;
                 container.appendChild(btn);
@@ -336,36 +321,35 @@
         function renderTabContent(key) {
             const data = pkg1Data[key];
             document.getElementById('tab-title').textContent = data.title;
-            
             const content = document.getElementById('tab-content');
             content.innerHTML = data.items.map(item => `
                 <div class="flex flex-col">
-                    <span class="font-bold text-brand-dark flex items-center gap-2">
-                        <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
+                    <span class="font-bold text-brand-dark flex items-center gap-2 text-sm md:text-base">
+                        <div class="w-1.5 h-1.5 rounded-full bg-brand-gold shrink-0"></div>
                         ${item.name}
                     </span>
-                    <span class="text-sm text-brand-light mt-1 ml-3.5 leading-relaxed">
+                    <span class="text-xs md:text-sm text-brand-light mt-1 ml-3.5 leading-relaxed">
                         ${item.desc}
                     </span>
                 </div>
             `).join('');
         }
 
-        // Renderização Pacote 2
         function renderPacote2() {
             const container = document.getElementById('pacote2-content');
             container.innerHTML = pkg2Data.map(item => `
-                <div class="bg-white/10 p-5 rounded-xl border border-white/5 backdrop-blur-sm hover:bg-white/20 transition-colors">
-                    <h4 class="font-bold text-brand-border mb-2">${item.title}</h4>
-                    <p class="text-sm text-gray-300">${item.desc}</p>
+                <div class="bg-white/10 p-4 md:p-5 rounded-xl border border-white/5 backdrop-blur-sm hover:bg-white/20 transition-colors">
+                    <h4 class="font-bold text-brand-border mb-1 md:mb-2 text-sm md:text-base">${item.title}</h4>
+                    <p class="text-xs md:text-sm text-gray-300">${item.desc}</p>
                 </div>
             `).join('');
         }
 
-        // Inicializa ao carregar
         window.onload = init;
+        window.addEventListener('resize', updateUI);
     </script>
 </body>
 </html>
+
 
 ```
